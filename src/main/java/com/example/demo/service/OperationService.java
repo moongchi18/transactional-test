@@ -37,7 +37,7 @@ public class OperationService {
 				System.err.println("Propagation " + Propagation.NOT_SUPPORTED + " parameters : " + option);
 				exceptionService.executeExceptionWithNotSupported(exception);
 			} else if (exception instanceof ChildException) {
-				System.err.println("ROLLBACK_FOR_CUSTOM_EXCEPTION " + Propagation.REQUIRES_NEW + " parameters : " + option);
+				System.err.println("ROLLBACK_FOR_CUSTOM_EXCEPTION " + Propagation.REQUIRED + " parameters : " + option);
 				exceptionService.executeCustomExceptionWithRequired(exception);
 			} else if (option == null) {
 				System.err.println("executeInternalMethod " + Propagation.REQUIRES_NEW + " parameters : " + option);
